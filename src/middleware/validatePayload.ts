@@ -5,7 +5,7 @@ export const validatePayload = (req: Request, res: Response, next: NextFunction)
   const payload: VerificationPayload = req.body;
   
   // Check if at least one verification parameter is present
-  const hasValidParameter = ['address', 'twitter', 'discord', 'telegram', 'email']
+  const hasValidParameter = ['address', 'twitter', 'telegram']
     .some(key => payload.hasOwnProperty(key));
 
   if (!hasValidParameter) {

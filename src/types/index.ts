@@ -1,9 +1,7 @@
 export interface VerificationPayload {
   address?: string;
   twitter?: string;
-  discord?: string;
   telegram?: string;
-  email?: string;
   startTimestamp?: string;
   endTimestamp?: string;
 }

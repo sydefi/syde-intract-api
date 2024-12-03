@@ -12,14 +12,9 @@ export class VerificationService {
       if (payload.twitter) {
         return this.verifyTwitter(payload.twitter);
       }
-      if (payload.discord) {
-        return this.verifyDiscord(payload.discord);
-      }
+
       if (payload.telegram) {
         return this.verifyTelegram(payload.telegram);
-      }
-      if (payload.email) {
-        return this.verifyEmail(payload.email);
       }
       
       return false;
@@ -39,18 +34,9 @@ export class VerificationService {
     return true;
   }
 
-  private async verifyDiscord(discordUsername: string): Promise<boolean> {
-    // Implement Discord verification logic
-    return true;
-  }
-
   private async verifyTelegram(telegramId: string): Promise<boolean> {
     // Implement Telegram verification logic
     return true;
   }
-
-  private async verifyEmail(email: string): Promise<boolean> {
-    // Implement email verification logic
-    return true;
-  }
+  
 }
